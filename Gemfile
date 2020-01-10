@@ -34,7 +34,7 @@ gem 'data-confirm-modal'
 # icons
 gem "font-awesome-rails"
 # bootstrap
-gem 'bootstrap', '~> 4.1.1'
+gem 'bootstrap', '~> 4.3.1'
 # jquery
 gem 'jquery-rails'
 # settings.yml etc..
