@@ -1,0 +1,16 @@
+.content-wrapper
+  section.content
+    .error-page
+      h2.headline.text-red 500
+
+      .error-content
+        h3
+          .fa.fa-warning.text-red
+          |一時的にご利用頂けません。
+
+        p
+          |サーバ側でエラーが発生したため、一時的にご利用頂けません。
+          |管理者までご連絡ください。
+
+        p
+          = @exception

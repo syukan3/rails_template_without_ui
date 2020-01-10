@@ -1,0 +1,5 @@
+permissions:
+  # admin 以外にグループが必要であれば、同じネストに書く
+  admin:
+    # model 毎に権限設定可能
+    dashboards: [read, write, delete]
