@@ -4,13 +4,14 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
-  # validates :user_type, presence: true
 
   # usernameを必須・一意とする
   validates_uniqueness_of :username
   # validates_presence_of :username
 
   # 権限設定が必要であれば、User モデルに user_type を作成して、settings.yml を整列する。
+  #
+  # validates :user_type, presence: true
   #
   #   enum user_type: {
   #       admin: 1 # 管理者

@@ -7,11 +7,9 @@ Rails.application.routes.draw do
     root :to => "devise/sessions#new"
   end
 
-  # devise_for :users, controllers: {
-  #     sessions: 'users/sessions'
-  # }
-
-
+  devise_for :users, controllers: {
+      sessions: 'users/sessions'
+  }
 
   # エラー処理用
   get '*anything' => 'errors#routing_error'
