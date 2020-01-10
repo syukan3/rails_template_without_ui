@@ -1,5 +1,7 @@
 ul
   li = link_to 'パスワード変更', edit_user_password_path(current_user)
   li = link_to 'ログアウト', destroy_user_session_path, method: :delete
-
-
+  li = link_to "ログアウト", destroy_user_session_path, method: :delete, data: {confirm: "本当に「<strong>#{current_user.email}</strong>」をログアウトしてよろしいですか？",
+                                                                                "commit" => "ログアウト",
+                                                                                "cancel" => "やっぱりやめる",
+                                                                              }, title: "ログアウトの確認"

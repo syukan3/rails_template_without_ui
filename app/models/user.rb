@@ -13,9 +13,9 @@ class User < ApplicationRecord
   #
   # validates :user_type, presence: true
   #
-  #   enum user_type: {
-  #       admin: 1 # 管理者
-  #   }
+  # enum user_type: {
+  #     admin: 1 # 管理者
+  # }
   #
   # def permission_allow?(controller_name, permission)
   #   return true if controller_name == 'sessions'
