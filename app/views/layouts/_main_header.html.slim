@@ -1,7 +1,16 @@
-ul
-  li = link_to 'パスワード変更', edit_user_password_path(current_user)
-  li = link_to 'ログアウト', destroy_user_session_path, method: :delete
-  li = link_to "ログアウト", destroy_user_session_path, method: :delete, data: {confirm: "本当に「<strong>#{current_user.email}</strong>」をログアウトしてよろしいですか？",
-                                                                                "commit" => "ログアウト",
-                                                                                "cancel" => "やっぱりやめる",
-                                                                              }, title: "ログアウトの確認"
+#thenavbar.navbar.navbar-default.navbar-fixed-top
+  .container
+    .navbar-header
+      / button.navbar-toggle[type="button" data-toggle="collapse" data-target=".navbar-collapse"]
+      /   span.icon-bar
+      /   span.icon-bar
+      /   span.icon-bar
+      a.navbar-brand[href="#"]
+        = image_tag 'chocolate.png', :size =>'50x40'
+    / .navbar-collapse.collapse
+    ul.nav.navbar-nav.navbar-right
+      li = link_to 'パスワード変更', edit_user_password_path(current_user)
+      / li = link_to "ログアウト", destroy_user_session_path, method: :delete, data: {confirm: "「<strong>#{current_user.email}</strong>」をログアウトしてよろしいですか？",
+                                                                                    "commit" => "ログアウト",
+                                                                                    "cancel" => "やっぱりやめる",
+                                                                                  }, title: "ログアウトの確認"

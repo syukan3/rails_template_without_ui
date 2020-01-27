@@ -7,12 +7,12 @@ html
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
     = csrf_meta_tags
     = csp_meta_tag
-    / = favicon_link_tag('favicon.ico')
+    = favicon_link_tag('favicon.ico')
 
-  body
-    p.notice = notice
-    p.alert = alert
+  body[data-spy="scroll" data-offset="80" data-target="#thenavbar"]
     - if user_signed_in?
       = render partial: 'layouts/main_header'
+      p.notice = notice
+      p.alert = alert
     /   = render partial: 'layouts/sidebar'
     = yield
